@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --black-color: #000;
+    --weight-color: #fff;
+    --orange-color: #ffae00;
+    --input-color: #f1f0f0a8;
+    --bg-color: #fafafa;
+    --shadow-color: #0000002e;
+    --first-color: #000047;
+    --text-color: #8f8f8f;
+    --second-color: #000000bf;
+}
+
+::placeholder {
+    font-size: 0.9rem;
+    color: #545454;
+    text-transform: capitalize;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+.containerAdd,
+header .header .logo,
+main .container,
+header .header,
+.container .left .list {
+    display: flex;
+    align-items: center;
+}
+
+.productTitle1 {
+    font-size: 20rem;
+}
+
+header .header {
+    padding: 2rem;
+    justify-content: space-between;
+    text-transform: capitalize;
+    box-shadow: 0px -13px 20px 7px var(--shadow-color);
+}
+
+header .header .logo .toggle {
+    margin: 0 1.2rem 0 1.2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.secondBar {
+    background-color: var(--orange-color);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 0;
+    transition: all 450ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.secondBar.active {
+    width: 17rem;
+}
+
+.secondBar .menu ul.activeUl {
+    visibility: visible;
+    transition-delay: 300ms;
+}
+
+.secondBar .menu {
+    margin-top: 8rem;
+    font-size: 0;
+}
+
+.secondBar .menu ul {
+    padding: 0 0.4rem;
+    position: relative;
+    visibility: hidden;
+}
+
+.secondBar .menu ul li {
+    text-transform: capitalize;
+    margin: 1.3rem;
+    background-color: var(--black-color);
+    border-radius: 50rem;
+    display: block;
+    padding: 0.9rem 0.4rem;
+}
+
+.secondBar .menu ul li i {
+    font-size: 1.2rem;
+    margin: 0 0.7rem;
+    color: var(--weight-color);
+}
+
+.secondBar .menu ul li a {
+    color: var(--weight-color);
+    font-size: 1.2rem;
+}
+
+.xmark {
+    font-size: 2rem;
+    color: var(--weight-color);
+    float: right;
+    padding: 0.9rem 1.5rem 1rem 0;
+    cursor: pointer;
+}
+
+header .header .logo h2 {
+    font-size: 1.7rem;
+    color: var(--orange-color);
+}
+
+header .header .logo h2 span {
+    color: var(--black-color);
+}
+
+header .header .form {
+    width: 40rem;
+}
+
+header .header .form input[type="text"] {
+    background-color: var(--input-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    width: 27rem;
+    font-size: 1.2rem;
+}
+
+header .header .form input[type="submit"] {
+    font-size: 1.06rem;
+    padding: 0.7rem 2rem;
+    text-align: center;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    cursor: pointer;
+    background-color: var(--orange-color);
+    margin-left: 1.2rem;
+    color: var(--weight-color);
+    font-weight: 400;
+}
+
+main .container {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.container .side {
+    min-height: 100vh;
+}
+
+.container .left {
+    width: 72rem;
+}
+
+.container .left .list {
+    padding: 1.8rem 0 1.4rem 10rem;
+}
+
+.container .left .list h3.result {
+    margin-right: 2rem;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    color: var(--first-color);
+}
+
+.container .left .list form ul li {
+    display: inline-block;
+}
+
+.container .left .list form ul li button {
+    padding: 0.6rem 2.6rem;
+    text-transform: capitalize;
+    font-size: 1.02rem;
+    color: var(--weight-color);
+    border-radius: 20rem;
+    -webkit-border-radius: 20rem;
+    -moz-border-radius: 20rem;
+    -ms-border-radius: 20rem;
+    -o-border-radius: 20rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    background-color: #04AA6D;
+}
+
+.container .left .list form ul li button.active {
+    background-color: var(--orange-color);
+    color: var(--weight-color);
+}
+
+.container .order {
+    width: 95%;
+    min-height: 70vh;
+    display: none;
+    background-color: var(--bg-color);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    margin: 0.5rem auto;
+    flex-direction: row;
+}
+
+.container .order.display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container .containerOrder .order .box {
+    width: calc(95% / 2);
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem 0 1.5rem 0;
+    background-color: var(--weight-color);
+    padding: 1.01rem;
+    border-radius: 0.5rem;
+}
+
+
+.order .box .orderContent {
+    display: flex;
+}
+
+.box .orderContent .imgProdcut img {
+    width: 9rem;
+    height: 13rem;
+    margin-right: 0.8rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.box .orderContent .content h4 {
+    font-size: 1.5rem;
+    color: var(--second-color);
+    text-transform: capitalize;
+}
+
+.box .orderContent .content p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    color: var(--text-color);
+}
+
+.box .orderContent .content .colflex {
+    display: flex;
+}
+
+.box .orderContent .content .colflex section:nth-child(2) {
+    margin-left: 1.4rem;
+}
+
+.box .orderContent .content h5 {
+    font-size: 1.02rem;
+    margin: 0.7rem 0 0.2rem 0;
+}
+
+.box .orderContent .content h5+p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+    color: var(--first-color);
+}
+
+.order .box .addCard {
+    width: 100%;
+    text-align: center;
+}
+
+.order .box .addCard button.addBtn {
+    background-color: var(--orange-color);
+    color: var(--weight-color);
+    font-size: 1.2rem;
+    border-radius: 50rem;
+    width: 17rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-align: center;
+}
+
+.addCard button.addBtn .fa-solid {
+    margin-right: 0.2rem;
+    font-size: 1.07rem;
+}
+
+
+.order .box .addCard section {
+    display: block;
+    margin: 0.9rem auto;
+}
+
+.order .box .addCard a.cr884 {
+    padding: 0.4rem 1.3rem;
+    color: var(--weight-color);
+    border-radius: 99px;
+    text-transform: capitalize;
+    margin-right: 0.3rem;
+    font-size: 0.99rem;
+}
+
+.order .box .addCard a.editBtn {
+    background-color: #12BBC2;
+}
+
+.order .box .addCard a.delBtn {
+    background-color: #dc143c;
+}
+
+.box .content div.quantity {
+    display: flex;
+    padding: 0.4rem 0;
+}
+
+.box .content div.quantity input[type="text"] {
+    width: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    user-select: none;
+    background-color: #eaeaea;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    pointer-events: none;
+}
+
+.box .content div.quantity input[type="text"]:focus {
+    outline: none;
+}
+
+.box .content div.quantity button {
+    padding: 0.2rem 0;
+    font-size: 1.2rem;
+    width: 2.4rem;
+    background-color: var(--orange-color);
+    color: var(--weight-color);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+main .container {
+    align-items: unset;
+}
+
+.container .right {
+    background-color: var(--weight-color);
+    width: 28rem;
+    min-height: 100vh;
+    box-shadow: 13px 20px 23px 10px var(--shadow-color);
+}
+
+.container .right .head_title {
+    padding: 1.2rem 0 1.4rem 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.container .right .head_title h2 {
+    color: var(--first-color);
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
+
+.container .right .head_title p {
+    font-size: 1.06rem;
+    color: var(--text-color);
+    margin-top: 0.3rem;
+}
+
+#sizes {
+    float: right;
+    font-size: 1.2rem;
+    background-color: var(--orange-color);
+    border-radius: 0.4rem;
+    padding: 0.5rem 1.2rem;
+    color: var(--weight-color);
+    margin-right: 0.9rem;
+}
+
+.container .right .order_form {
+    width: 96%;
+    padding: 0.7rem 0.2rem;
+    margin: 0.8rem auto;
+    background-color: #f7f7f7;
+    border-radius: 0.5rem;
+}
+
+.order_form .imageHandler {
+    width: 3.5rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+}
+
+.order_form h3 {
+    font-size: 1.09rem;
+    color: var(--orange-color);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.order_form button {
+    background-color: transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #fe2752;
+}
+
+.order_form p {
+    font-size: 1.02rem;
+    color: var(--first-color);
+}
+
+.container .right .order_form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Total {
+    position: fixed;
+    bottom: 0%;
+    width: 28rem;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--weight-color);
+}
+
+.Total .conform {
+    background-color: var(--orange-color);
+    color: var(--weight-color);
+    padding: 0.7rem 2.4rem;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.Total .totalPrice,
+.Total .priceSign {
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.containerAdd {
+    justify-content: space-evenly;
+    margin-top: 1.2rem;
+}
+
+.containerAdd .col {
+    width: 45rem;
+    height: 70vh;
+    border-radius: 0.3rem;
+
+}
+
+
+
+.containerAdd .box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerAdd .box1 .boxWithBor {
+    border-width: 3px;
+    border-style: dashed;
+    border-color: #dddddd;
+    width: 40rem;
+    height: 20rem;
+    background-color: #f9f9f9;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerAdd .box1 .boxWithBor #picfile {
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    position: absolute;
+    z-index: 8;
+    cursor: pointer;
+}
+
+.boxWithBor.activeForm {
+    border-color: #3DC763 !important;
+    background-color: #99ebb01a !important;
+}
+
+.containerAdd .box1 .boxWithBor .title {
+    font-size: 1.4rem;
+    color: var(--second-color);
+    font-weight: 500;
+}
+
+.containerAdd .box1 .boxWithBor .fa-solid {
+    margin: 4.5rem 0 0.5rem 0;
+    font-size: 4rem;
+    color: var(--first-color);
+    opacity: 0.9;
+}
+
+.boxWithBor #preview {
+    width: 4rem;
+    border-radius: 0.5rem;
+    margin: 9.5rem auto 0 0;
+}
+
+.containerAdd .box2 {
+    padding-top: 1.2rem;
+}
+
+.containerAdd .box2 .addPro h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.containerAdd .box2 label {
+    font-size: 1.01rem;
+    color: var(--first-color);
+    padding: 0.3rem 0;
+    text-transform: capitalize;
+    display: block;
+}
+
+.containerAdd .box2 input {
+    background-color: var(--input-color);
+    padding: 0.7rem;
+    width: 35rem;
+    display: block;
+    font-size: 1.02rem;
+    margin: 0rem 0 0.7rem;
+    border-radius: 0.3rem;
+    border: 2px solid transparent;
+}
+
+.containerAdd .box2 .type select {
+    width: 35rem;
+    background-color: var(--input-color);
+    padding: 0.7rem;
+    font-size: 1.02rem;
+    border-radius: 0.3rem;
+    color: #545454;
+    border: 2px solid transparent;
+}
+
+.error {
+    border: 2px solid #fe2752 !important;
+    background-color: #f93e6314 !important;
+}
+
+
+.btn_hytr {
+    border-radius: 50rem;
+    font-size: 1.09rem;
+    color: var(--weight-color);
+    cursor: pointer;
+    padding: 0.7rem 3.4rem;
+    text-transform: capitalize;
+}
+
+#upload_file {
+    background-color: var(--orange-color);
+}
+
+#update_file {
+    background-color: #12BBC2;
+}
+
+.btnProcut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnProcut section {
+    position: relative;
+    margin: 0 0.8rem;
+}
+
+.btnProcut section .fa-solid {
+    position: absolute;
+    top: 50%;
+    left: 2.2rem;
+    transform: translate(-50%, -50%);
+    color: var(--weight-color);
+    font-size: 1.14rem;
+}
+
